@@ -1,0 +1,21 @@
+Steps to merge branche files/data into main or master branch.
+Steps to craete pull req:
+
+Start:
+1. go tO Github
+2. Go to pull-req
+3. New pull req
+4. select comparison ( eg master <- newbranch )
+5. click create pull-req
+6. add desc
+6. create pull req
+End!
+
+Steps to accpet or verfiy new data form pull requets
+Start:
+1. Check dashboard of pull req
+2. click file chnages for verify or check updates 
+3. return to conversation 
+4. merge to pull req Or colse pull req if updated data is not accurate 
+5. merge pull req 
+End!
