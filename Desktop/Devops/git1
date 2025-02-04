@@ -1,10 +1,9 @@
- practsing git and github.
-steps to  create a file and add, commit to local repo and then push it on to remote repo.
-step1: mkdir <dirname>
-step2: cd <dirname>
-step3: touch <filename>
-step4: vim <filename>
-step5: git add <filename>
-step6: git commit -m "comments"
-step7: git push <url> --set-uopstream master
+steps to create file and add and commit it to local repo and then upload it to remote repo.
+Start:
+1. touch filename 
+2. vim filename
+3. git add filename
+4. git commit filename
+5. git push url --set-upstream main
+6. git push url --set-upsteam master
 End!
