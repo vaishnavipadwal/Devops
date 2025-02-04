@@ -1,2 +1,18 @@
 practising on git branch concept
+steps to craete a branch push it into remote repository, then add a file into that new branch then commitit into local and then push it on to remote repository.
+Start
+1. git branch <branchname>
+2. git push <url> <branchname>
+3. git checkout <newbranchname>
+4. touch <filename>
+5. vim <filename>
+6. git add .
+7. git commit -m "comment"
+8. git push <url> <branchname>
+End 
 
+Now merge that file avalabile in branch after varifations
+Start
+1. git checkout master
+2. git merge <branchname>
+End
