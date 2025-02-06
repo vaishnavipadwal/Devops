@@ -46,3 +46,13 @@ resource "aws_route_table_association" "my_rta" {
   subnet_id      = aws_subnet.my_subnet.id
   route_table_id = aws_route_table.my_route_table.id
 }
+
+resource "aws_instance" "myec2" {
+    ami = "ami-04b4f1a9cf54c11d0"
+    instance_type = "t2.micro"
+    key_name = "teraaform-1"
+    security_groups = [ "default" ]
+    tags = {
+      Name = "spiderinstance"
+    }
+} 
