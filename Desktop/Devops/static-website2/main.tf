@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "vaishu-stat-web" {
-  bucket = "static-website-buc-2"
+  bucket = var.bucket-name
   tags = {
     Name        = "vaishnavi-StaticWebsite"
     Environment = "Dev"
