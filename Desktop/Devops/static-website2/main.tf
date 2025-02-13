@@ -56,8 +56,8 @@ resource "aws_s3_object" "index" {
 }
 resource "aws_s3_object" "style" {
   bucket = aws_s3_bucket.vaishu-stat-web.id
-  key    = "style.css"
-  source = "style.css"
+  key    = "styles.css"
+  source = "styles.css"
   content_type = "text/css"
 }
 
