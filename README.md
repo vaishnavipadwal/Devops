@@ -19,31 +19,31 @@ Terraform keeps track of the current state of your infrastructure in a state fil
 * Write Configuration:
 You create .tf files that define your infrastructure. For example, a simple configuration for an AWS EC2 instance:
 
-  provider "aws" {
-     region = "us-west-2"
-  }
-
-  resource "aws_instance" "example" {
-     ami           = "ami-0c55b159cbfafe1f0"
-   instance_type = "t2.micro"
-  }
+    provider "aws" {
+       region = "us-west-2"
+    }
+  
+    resource "aws_instance" "example" {
+       ami           = "ami-0c55b159cbfafe1f0"
+     instance_type = "t2.micro"
+    }
 
 * Initialize:
 You run terraform init to initialize your working directory. This command installs the necessary provider plugins for the services you're using (e.g., AWS, Azure):
 
-  terraform init
+    terraform init
 
 * Plan:
 Terraform will generate an execution plan, which shows what actions it will take to match the desired state. This is done with terraform plan:
 
-  terraform plan
+    terraform plan
 
 The plan will show you the infrastructure changes Terraform will make (like creating resources).
 
 * Apply:
 Once you re satisfied with the plan, you can apply the changes with terraform apply. This command creates, updates, or deletes resources to align the infrastructure with the configuration.
 
-  terraform apply
+    terraform apply
 
 * Inspect State:
 Terraform uses a state file to track the resources it manages. This state is updated automatically each time terraform apply is run.
@@ -52,7 +52,7 @@ Terraform uses a state file to track the resources it manages. This state is upd
 If you modify your configuration, you can run terraform plan again to see what changes will occur and then terraform apply to apply them.
 If you want to destroy all the resources you’ve created, you can use terraform destroy.
 
-terraform destroy
+    terraform destroy
  
 ---
 ## Variables in terraform
@@ -60,11 +60,11 @@ Variables in Terraform allow you to define inputs that can be used to configure 
 
 * Defining variable 
 
-variable "variable_name" {
-    description = "A description of the variable"
-    type        = string  # (optional: you can specify the type like string, number, list, etc.)
-    default     = "default_value"  # (optional: default value for the variable)
-  }
+  variable "variable_name" {
+      description = "A description of the variable"
+      type        = string  # (optional: you can specify the type like string, number, list, etc.)
+      default     = "default_value"  # (optional: default value for the variable)
+    }
 
 
 ## Outputs in Terraform
@@ -80,11 +80,11 @@ Outputs in Terraform are used to display useful information about your infrastru
 Modules in Terraform are a way to organize and reuse infrastructure code. They allow you to encapsulate a set of resources, variables, outputs, and other configurations into a reusable unit that can be easily shared across different configurations and environments. Modules are a key feature in Terraform for maintaining clean, maintainable, and scalable infrastructure
 
 * Types of modules
-1. Root Module: This is the main configuration directory where you define your resources. It's the starting point of your Terraform project.
+  1. Root Module: This is the main configuration directory where you define your resources. It's the starting point of your Terraform project.
 
-2. Child Modules: These are the reusable modules that can be referenced within your root module or other modules. A module can be in a separate directory or pulled from a public or private registry.
+  2. Child Modules: These are the reusable modules that can be referenced within your root module or other modules. A module can be in a separate directory or         pulled from a public or private registry.
+  
+  3. Pre-built Modules: The Terraform Registry offers many pre-built modules for different cloud providers and services. These modules can be used directly or         customized for your needs. 
 
-3. Pre-built Modules: The Terraform Registry offers many pre-built modules for different cloud providers and services. These modules can be used directly or customized for your needs. 
 
-![Terraform module](https://in.images.search.yahoo.com/search/images;_ylt=AwrPrV5T.K1nrgIAEc.7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3BpdnM-?p=modules+in+terraform&fr2=piv-web&type=E210IN714G0&fr=mcafee#id=9&iurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F1200%2F1*ItQg-iUT0O3QDiLoJBndJg.png&action=click)
 
