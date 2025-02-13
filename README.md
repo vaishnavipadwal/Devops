@@ -19,31 +19,31 @@ Terraform keeps track of the current state of your infrastructure in a state fil
 * Write Configuration:
 You create .tf files that define your infrastructure. For example, a simple configuration for an AWS EC2 instance:
 
-provider "aws" {
-  region = "us-west-2"
-}
+  provider "aws" {
+     region = "us-west-2"
+  }
 
-resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-}
+  resource "aws_instance" "example" {
+     ami           = "ami-0c55b159cbfafe1f0"
+   instance_type = "t2.micro"
+  }
 
 * Initialize:
 You run terraform init to initialize your working directory. This command installs the necessary provider plugins for the services you're using (e.g., AWS, Azure):
 
-terraform init
+  terraform init
 
 * Plan:
 Terraform will generate an execution plan, which shows what actions it will take to match the desired state. This is done with terraform plan:
 
-terraform plan
+  terraform plan
 
 The plan will show you the infrastructure changes Terraform will make (like creating resources).
 
 * Apply:
 Once you re satisfied with the plan, you can apply the changes with terraform apply. This command creates, updates, or deletes resources to align the infrastructure with the configuration.
 
-terraform apply
+  terraform apply
 
 * Inspect State:
 Terraform uses a state file to track the resources it manages. This state is updated automatically each time terraform apply is run.
@@ -61,10 +61,10 @@ Variables in Terraform allow you to define inputs that can be used to configure 
 * Defining variable 
 
 variable "variable_name" {
-  description = "A description of the variable"
-  type        = string  # (optional: you can specify the type like string, number, list, etc.)
-  default     = "default_value"  # (optional: default value for the variable)
-}
+    description = "A description of the variable"
+    type        = string  # (optional: you can specify the type like string, number, list, etc.)
+    default     = "default_value"  # (optional: default value for the variable)
+  }
 
 
 ## Outputs in Terraform
@@ -72,9 +72,9 @@ Outputs in Terraform are used to display useful information about your infrastru
 
 * Defining output
 
-output "instance_id" {
-  value = aws_instance.example.id
-}
+  output "instance_id" {
+    value = aws_instance.example.id
+  }
 
 ## Terraform modules 
 Modules in Terraform are a way to organize and reuse infrastructure code. They allow you to encapsulate a set of resources, variables, outputs, and other configurations into a reusable unit that can be easily shared across different configurations and environments. Modules are a key feature in Terraform for maintaining clean, maintainable, and scalable infrastructure
