@@ -109,7 +109,8 @@ Modules in Terraform are a way to organize and reuse infrastructure code. They a
 * Using a Module Locally
 Create the Module Folder:
 For example, you could create a folder named ec2_instance/ with the necessary .tf files.
-Call the Module: In your main configuration:
+
+* Call the Module: In your main configuration:
 ```
 module "ec2_instance" {
   source = "./ec2_instance"   # Local path to the module
